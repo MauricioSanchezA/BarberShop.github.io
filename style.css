@@ -54,7 +54,7 @@ nav a {
 
 nav li:hover a {
     color: #c78c19;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     transition: 1s all;
 }
