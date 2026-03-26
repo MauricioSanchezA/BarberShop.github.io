@@ -8,69 +8,70 @@
     <!-- Fuente moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS separado -->
+    <!-- Estilo Unificado -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <video src="img/Barbero - 48968.mp4" autoplay muted loop></video>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Barbería<span>Alura</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#servicios">Servicios</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+    <header class="hero">
+        <div class="hero-video-container">
+            <video src="img/Barbero - 48968.mp4" autoplay muted loop playsinline></video>
+            <div class="overlay"></div>
+        </div>
 
         <div class="hero-content">
-            <h1>Barbería Alura</h1>
+            <span class="hero-subtitle">Tradición y Vanguardia</span>
+            <h1>Barbería <span>Alura</span></h1>
             <p>Estilo. Precisión. Actitud.</p>
+            <a href="contacto.html" class="btn-cta">Reserva tu cita</a>
         </div>
     </header>
 
-    <!-- SOBRE NOSOTROS -->
-    <section id="sobre">
+    <section id="sobre" class="section">
         <h2 class="titulo">Sobre Nosotros</h2>
-
-        <div class="cards">
+        <div class="cards-grid">
             <div class="card">
-                <img src="img/utensilios.jpg" alt="Utensilios">
+                <div class="card-img-wrapper"><img src="img/utensilios.jpg" alt="Utensilios"></div>
                 <p>Profesionales expertos en cortes modernos y clásicos.</p>
             </div>
-
             <div class="card">
-                <img src="img/diferenciales.jpg" alt="Experiencia">
+                <div class="card-img-wrapper"><img src="img/diferenciales.jpg" alt="Experiencia"></div>
                 <p>Experiencia premium y atención personalizada.</p>
             </div>
-
             <div class="card">
-                <img src="img/banner.jpg" alt="Ambiente">
+                <div class="card-img-wrapper"><img src="img/banner.jpg" alt="Ambiente"></div>
                 <p>Ambiente cómodo y elegante en el corazón de la ciudad.</p>
             </div>
         </div>
     </section>
 
-    <!-- MAPA -->
-    <section id="ubicacion">
-        <h2 class="titulo">Ubicación</h2>
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.5686043483665!2d-75.68816046511232!3d4.807059200000014"
-            loading="lazy"
-            allowfullscreen
-        ></iframe>
+    <section id="ubicacion" class="section-map">
+        <div class="map-info">
+            <h2 class="titulo">Nuestra Ubicación</h2>
+            <p>Visítanos en el Centro Histórico de la Ciudad</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.8105084968856!2d-75.69073532412808!3d4.802170840742192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388748eb41091b%3A0x633d6b1d44080922!2sPereira%2C%20Risaralda!5e0!3m2!1sen!2sco!4v1715876400000!5m2!1sen!2sco" loading="lazy" allowfullscreen></iframe>
+        </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <p>© 2026 Barbería Alura — Mauricio Sánchez Abella</p>
     </footer>
 
-    <!-- SCRIPT para animación de cards -->
     <script>
         const cards = document.querySelectorAll('.card');
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('show');
