@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Barbería Alura</title>
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
-<title>Productos_Barberia</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
-        <video src="img/Barbero - 48968.mp4" autoplay muted loop></video>
-        <div class="encabezado" id="">
-            <h1><img src="img/logo.png"></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="productos.html">Productos</a></li>
+    <!-- HEADER / HERO -->
+    <header class="header">
+        <video class="header-video" src="img/Barbero - 48968.mp4" autoplay muted loop playsinline></video>
+
+        <div class="header-overlay">
+            <h1 class="logo"><img src="img/logo.png" alt="Barbería Alura"></h1>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="active" href="productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <ul class="productos" id="">
-            <li>
-                <h2>Cabello</h2>
-                <img src="img/cabello.jpg" alt="">
-                <p class="producto-descripcion">Con tijera o maquina, a gusto del cliente</p>
-                <p class="producto-precio">$10 USD</p>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="section productos-section">
+        <h2 class="section-title">Nuestros Servicios</h2>
 
+        <ul class="productos-grid">
+            <li class="producto-card">
+                <img src="img/cabello.jpg" alt="Corte de cabello" class="producto-img">
+                <h3 class="producto-titulo">Cabello</h3>
+                <p class="producto-descripcion">Corte profesional con tijera o máquina, al estilo del cliente.</p>
+                <span class="producto-precio">$10 USD</span>
             </li>
-            <li>
-                <h2>Barba</h2>
-                <img src="img/barba.jpg" alt="">
-                <p class="producto-descripcion">Corte y diseño profesional de barba</p>
-                <p class="producto-precio">$8 USD</p>
 
+            <li class="producto-card">
+                <img src="img/barba.jpg" alt="Diseño de barba" class="producto-img">
+                <h3 class="producto-titulo">Barba</h3>
+                <p class="producto-descripcion">Perfilado y diseño de barba con acabado premium.</p>
+                <span class="producto-precio">$8 USD</span>
             </li>
-            <li>
-                <h2>Cabello + Barba</h2>
-                <img src="img/cabello+barba.jpg" alt="">
-                <p class="producto-descripcion">Paquete completo de cabello y barba</p>
-                <p class="producto-precio">$15 USD</p>
 
+            <li class="producto-card">
+                <img src="img/cabello+barba.jpg" alt="Cabello y barba" class="producto-img">
+                <h3 class="producto-titulo">Cabello + Barba</h3>
+                <p class="producto-descripcion">Servicio completo para un look totalmente renovado.</p>
+                <span class="producto-precio">$15 USD</span>
             </li>
         </ul>
     </main>
 
-    <footer>
-        <img src="img/logo-blanco.png" alt="Logo de la Barberia Alura">
-        <p class="Copyright">&copy Copyright Barberia Alura 2023<br>Mauricio Sánchez Abella</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img src="img/logo-blanco.png" alt="Logo Barbería Alura" class="footer-logo">
+        <p class="footer-copy">&copy; 2026 Barbería Alura<br>Desarrollado por Mauricio Sánchez Abella</p>
     </footer>
 
 </body>
-
 </html>
